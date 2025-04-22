@@ -1,8 +1,9 @@
-# Tower Jackpot Game | Solana 
+# 🖥️ Tower Jackpot Game Frontend | 🎰 Solana
+This is the frontend UI for the Tower Jackpot Game, a high-risk, high-reward game powered by the Solana blockchain. Players try their luck climbing the tower — each level multiplies the reward but increases the risk of losing it all.
 
-## Requirements
+---
 
-## Development
+# Development
 
 ```bash
 npm run dev
