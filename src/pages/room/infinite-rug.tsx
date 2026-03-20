@@ -178,11 +178,12 @@ export default function Rooms(props: { isMute: boolean; setIsMute: Function }) {
             <ChatIcon />
           </button>
           <button className="flex items-center justify-center mt-[34px] rounded-[10px] border-[1px] border-[#FFFFFF54] py-2 pr-4 absolute left-3 -top-2.5 xl:left-6 -xl:top-2">
-            <Link href={"/"}>
-              <a className="text-sm text-[#FFFFFF] ml-2 uppercase font-semibold flex items-center">
-                <Leftarrow className="w-3 h-3" />
-                <span className="hidden ml-2 md:block">Back Home</span>
-              </a>
+            <Link
+              href="/"
+              className="text-sm text-[#FFFFFF] ml-2 uppercase font-semibold flex items-center"
+            >
+              <Leftarrow className="w-3 h-3" />
+              <span className="hidden ml-2 md:block">Back Home</span>
             </Link>
           </button>
           <div className="mt-4 w-[280px] mx-auto hidden fixed right-0 top-0 z-20 xl:grid place-content-center">

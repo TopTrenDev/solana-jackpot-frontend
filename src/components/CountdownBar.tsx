@@ -23,7 +23,8 @@ export default function CountdownBar(props: {
   }, [gameData]);
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timer;
+    // Store timeout handle so we can clean it up when the effect re-runs/unmounts.
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
     if (gameData) {
       console.log("countdown: ", Math.floor((gameData?.endTimestamp - new Date().getTime()) / 1000))
       if (
@@ -33,7 +34,7 @@ export default function CountdownBar(props: {
           setStarted(true);
           if (!isMute) {
             setIsBetSound(true);
-            setTimeout(() => {
+            timeoutId = setTimeout(() => {
               setIsBetSound(false);
             }, 1500);
           } else {

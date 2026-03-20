@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/link-passhref */
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React, { useState } from "react";
@@ -45,56 +44,50 @@ export default function Sidebar() {
           Games
         </p>
         <div className="border-[1px] border-[#ffffff32] mx-4" />
-        <Link href="/room/the-tower" passHref>
-          <a>
-            <div className="flex my-4 hover:bg-[#ffffff12] hover:border-r-2 hover:border-[#D9D9D9] px-6 items-center">
-              <img
-                src="/img/tower.png"
-                alt=""
-                className="w-6 h-6 mr-4 object-contain"
-              />
-              <p
-                className={`lg:block cursor-pointer font-bold text-[#ffffff] py-[15px] ${mobilMenuState ? "hidden" : "block"
-                  }`}
-              >
-                The Tower
-              </p>
-            </div>
-          </a>
+        <Link href="/room/the-tower">
+          <div className="flex my-4 hover:bg-[#ffffff12] hover:border-r-2 hover:border-[#D9D9D9] px-6 items-center">
+            <img
+              src="/img/tower.png"
+              alt=""
+              className="w-6 h-6 mr-4 object-contain"
+            />
+            <p
+              className={`lg:block cursor-pointer font-bold text-[#ffffff] py-[15px] ${mobilMenuState ? "hidden" : "block"
+                }`}
+            >
+              The Tower
+            </p>
+          </div>
         </Link>
-        <Link href="/room/operators-hub" passHref>
-          <a>
-            <div className="flex my-4 hover:bg-[#ffffff12] hover:border-r-2 hover:border-[#D9D9D9] px-6 items-center">
-              <img
-                src="/img/tower.png"
-                alt=""
-                className="w-6 h-6 mr-4 object-contain"
-              />
-              <p
-                className={`lg:block cursor-pointer font-bold text-[#ffffff] py-[15px] ${mobilMenuState ? "hidden" : "block"
-                  }`}
-              >
-                Operators Hub
-              </p>
-            </div>
-          </a>
+        <Link href="/room/operators-hub">
+          <div className="flex my-4 hover:bg-[#ffffff12] hover:border-r-2 hover:border-[#D9D9D9] px-6 items-center">
+            <img
+              src="/img/tower.png"
+              alt=""
+              className="w-6 h-6 mr-4 object-contain"
+            />
+            <p
+              className={`lg:block cursor-pointer font-bold text-[#ffffff] py-[15px] ${mobilMenuState ? "hidden" : "block"
+                }`}
+            >
+              Operators Hub
+            </p>
+          </div>
         </Link>
-        <Link href="/room/infinite-rug" passHref>
-          <a>
-            <div className="flex my-4 hover:bg-[#ffffff12] hover:border-r-2 hover:border-[#D9D9D9] px-6 items-center">
-              <img
-                src="/img/tower.png"
-                alt=""
-                className="w-6 h-6 mr-4 object-contain"
-              />
-              <p
-                className={`lg:block cursor-pointer font-bold text-[#ffffff] py-[15px] ${mobilMenuState ? "hidden" : "block"
-                  }`}
-              >
-                Infinite Rug
-              </p>
-            </div>
-          </a>
+        <Link href="/room/infinite-rug">
+          <div className="flex my-4 hover:bg-[#ffffff12] hover:border-r-2 hover:border-[#D9D9D9] px-6 items-center">
+            <img
+              src="/img/tower.png"
+              alt=""
+              className="w-6 h-6 mr-4 object-contain"
+            />
+            <p
+              className={`lg:block cursor-pointer font-bold text-[#ffffff] py-[15px] ${mobilMenuState ? "hidden" : "block"
+                }`}
+            >
+              Infinite Rug
+            </p>
+          </div>
         </Link>
 
         <p
@@ -104,23 +97,21 @@ export default function Sidebar() {
           Support
         </p>
         <div className="border-[1px] border-[#ffffff32] mx-4" />
-        <Link href="https://discord.gg/aejTFT6hKY" passHref>
-          <a className="">
-            <div className="mt-4 flex hover:bg-[#ffffff12] hover:border-r-2 hover:border-[#D9D9D9] px-6 items-center">
-              <img
-                src="/img/discord.png"
-                alt=""
-                className="w-6 h-6 mr-4 object-contain"
-              />
-              <p
-                className={`lg:block cursor-pointer font-bold text-[#ffffff] py-[15px] ${mobilMenuState ? "hidden" : "block"
-                  }`}
-              >
-                Discord
-              </p>
-            </div>
-          </a>
-        </Link>
+        <a href="https://discord.gg/aejTFT6hKY">
+          <div className="mt-4 flex hover:bg-[#ffffff12] hover:border-r-2 hover:border-[#D9D9D9] px-6 items-center">
+            <img
+              src="/img/discord.png"
+              alt=""
+              className="w-6 h-6 mr-4 object-contain"
+            />
+            <p
+              className={`lg:block cursor-pointer font-bold text-[#ffffff] py-[15px] ${mobilMenuState ? "hidden" : "block"
+                }`}
+            >
+              Discord
+            </p>
+          </div>
+        </a>
       </div >
     </nav >
   );

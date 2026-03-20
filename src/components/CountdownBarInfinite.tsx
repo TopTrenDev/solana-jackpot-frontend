@@ -15,7 +15,8 @@ export default function CountdownBar(props: {
   const [force, setForce] = useState(false);
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timer;
+    // Store timeout handle so we can clean it up when the effect re-runs/unmounts.
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
     if (gameData && heartbeat) {
       if (Math.floor((gameData?.endTimestamp - heartbeat) / 1000) >= 0) {
         setCount(Math.floor((gameData?.endTimestamp - heartbeat) / 1000));
@@ -28,7 +29,7 @@ export default function CountdownBar(props: {
           setStarted(true);
           if (!isMute) {
             setIsBetSound(true);
-            setTimeout(() => {
+            timeoutId = setTimeout(() => {
               setIsBetSound(false);
             }, 1500);
           } else {
